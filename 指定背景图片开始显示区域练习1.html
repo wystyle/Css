@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>指定背景图片开始显示区域练习1</title>
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.f1{
+			width: 300px;
+			height: 300px;
+			border: 20px dotted #000;
+			background: no-repeat url(../test2/02.jpg);
+			margin-bottom: 20px;
+		}
+		.f2{
+			width: 300px;
+			height: 300px;
+			border: 20px dotted #000;
+			background: no-repeat url(../test2/02.jpg);
+			background-origin: border-box;
+		}
+		.f3{
+			width: 300px;
+			height: 300px;
+			border: 20px dotted #000;
+			background: no-repeat url(../test2/02.jpg);
+			margin-bottom: 20px;
+			background-origin: content-box;
+			
+		}
+	</style>
+</head>
+<body><div class="f0">
+	<div class="f1"></div>
+	<div class="f2"></div>
+	<div class="f3">sss</div>
+	<div class="f4"></div>
+	<div class="f5"></div>
+</div>
+</body>
+</html>

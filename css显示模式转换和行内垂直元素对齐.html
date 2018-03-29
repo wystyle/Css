@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css显示模式转换和行内垂直元素对齐</title>
+	<style>
+		*{margin: 0;
+		padding: 0;
+
+		}
+		p{
+			border: 1px solid #000;
+			margin-bottom: 10px;
+			margin-left: 10px;
+			line-height: 30px;
+
+		}
+		.box{
+			background: black;
+			padding-left: 10px;
+			color: white;
+		}
+		.dog{
+			display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: red;
+            display: inline-block;
+		}
+		p:nth-child(2) .dog{
+			vertical-align: top;
+		}
+		p:nth-child(3) .dog{
+			vertical-align: middle;
+		}
+		p:nth-child(4) .dog{
+			vertical-align: baseline;
+		}
+		p:nth-child(5) .dog{
+			vertical-align: bottom;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p><span class="box"><span class="dog"></span>我是文本 默认</span></p>
+        <p><span class="box"><span class="dog"></span>我是文本 top</span></p>
+        <p><span class="box"><span class="dog"></span>我是文本 middle</span></p>
+        <p><span class="box"><span class="dog"></span>我是文本 base</span></p>
+        <p><span class="box"><span class="dog"></span>我是文本 bottom</span></p>
+        <p><span class="box"><span class="dog"></span>我是文本text-bottom</span>
+        </div>
+</body>
+</html>

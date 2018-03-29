@@ -2,92 +2,68 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>盒模型作业练习1</title>
+	<title>作业练习1</title>
 	<style>
-		.f0{
-			width: 300px;
-			height: 400px;
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		.new{
+			width: 280px;
+			margin: 50px auto;
+
+		}
+		.new .f1{
+			padding-top: 6px;
+			height: 52px;
+			border-top: 1px solid #ececec;
+			border-bottom: 1px solid #ececec;
+		}
+		h3{
+			width: 105px;
+			border-top: 2px solid #069;
+			font-size: 20px;
+			margin-top: -7px;
+			padding-top: 7px;
+			color: #069;
+		}
+		.new .f1 span{
+			color: #999;
+		}
+
+		.f2 li{
+			list-style: none;
+			width: 100%;
+			height: 35px;
+			line-height: 35px;
 			white-space: nowrap;
-			overflow: hidden;
 			text-overflow: ellipsis;
-			text-decoration: none;
+			overflow: hidden;
+			font-size: 12px;
+			border-bottom: 1px dotted #ececec;
 		}
-		.b1{
-			width: 200px;
-			height: 50px;
-			padding-top: 0px;
-			margin-top: 0px;
-			color: rgb(255 255 0);
 
-
-		}
-		.f1{
-			width: 300px;
-			height: 50px;
-			border-top: 1px dashed black;
-
-		}
-		.f2{
-			width: 300px;
-			height: 50px;
-			border-top: 1px dashed black;
-
-		}
-		.f3{
-			width: 300px;
-			height: 50px;
-			border-top: 1px dashed black;
-
-		}
-		.f4{
-			width: 300px;
-			height: 50px;
-			border-top: 1px dashed black;
-
-		}
-		.f5{
-			width: 300px;
-			height: 50px;
-			border-top: 1px dashed black;
-
-		}
 	</style>
 </head>
 <body>
-	<div class="f0">
-		<h1 class="b1">
-			<a href="">
-		互联网新闻
-	    </a>
-        </h1>
-		<div class="f1">
-			<a href="#">
-			<p>“魔王-2”型导弹横空出世 15枚弹头 2万公里无死角覆盖全球
-			</p>
-		</a>
-		</div>
-		<div class="f2">
-			<a href="#">
-			<p>
-		真暖！轻拍怀里的小姑娘，她的一个习惯性动作走红朋友圈
-	        </p>
-	    </a>
-	    </div>
-		<div class="f3">
-			<a href="#">
-				<p>安倍与奥巴马共进午餐，特朗普若生气，安倍怎么办？</p>
-			</a>
-		</div>
-		<div class="f4">
-			<a href="#">
-				<p>一谈中国就犯法，赤瓜礁海战为何成了越南禁忌</p>
-			</a>
-		</div>
-		<div class="f5">
-			<a href="#">
-				<p>反制想在台湾搞事的美国，建议国家用这招！</p>
-			</a>
-		</div>
-	</div>
+	<div class="new">
+	<header class="f1">
+		<h3>互联网新闻</h3><span>INTERNET NEWS</span>
+	</header>
+	<ul class="f2">
+		<li>特斯拉Model X电池起火爆燃 导致一人丧生</li>
+		<li>Facebook，非死不可？</li>
+		<li>滴滴进军外卖，三雄争霸即将来临？</li>
+		<li>马斯克怒删特斯拉和SpaceX脸书主页！硅谷二马恩..</li>
+		<li>马化腾：腾讯选香港上市是希望“夫妻作息一致”</li>
+		<li>拼多多估值超过唯品会，订单超过京东，怪不得连阿里都..</li>
+		<li>深圳互联网发展状况报告出炉 去年超9成深圳网民热衷..</li>
+		<li>和家获30亿人民币B轮融资，本周铅笔道独家获取1..</li>
+		<li>沃尔玛下架支付宝，“神仙打架”不能让“凡人遭殃”</li>
+		<li>听歌神器Foobar2000正式上架Win10商店..</li>
+	</ul>
+	
+    </div>
+	
 </body>
 </html>
