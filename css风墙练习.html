@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css风墙练习</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		h1{
+			width: 200px;
+			height: 50px;
+			color: red;
+			margin: 50px auto;
+			line-height: 50px;
+			text-align: center;
+
+		}
+
+		ul{
+			width: 800px;
+			height: 600px;
+			margin: 100px auto;
+			list-style: none;
+			overflow: hidden;
+		}
+		ul li{
+			width: 100px;
+			height: 100%;
+			float: left;
+			box-sizing: border-box;
+			transition:width,0.5s;
+			
+		}
+		ul li img{
+			height: 100%;
+		}
+		ul:hover li{
+			width: 65px;
+		}
+		ul li:hover{
+			width: 345px;
+		}
+
+	</style>
+</head>
+<body>
+		<h1>
+		    求签人
+		</h1>
+	<ul>
+		<li><img src="../test2/14.jpg"></li>
+		<li><img src="../test2/15.jpg"></li>
+		<li><img src="../test2/16.jpg"></li>
+		<li><img src="../test2/17.jpg"></li>
+		<li><img src="../test2/18.jpg"></li>
+		<li><img src="../test2/19.jpg"></li>
+		<li><img src="../test2/20.jpg"></li>
+		<li><img src="../test2/21.jpg"></li>
+	</ul>
+</body>
+</html>

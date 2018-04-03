@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>平滑过渡页面练习1</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.contenter input,.contenter a{
+			position: fixed;
+			top: 0px;
+			width: 20%;
+			height: 34px;
+			line-height: 34px;
+		}
+		.contenter a{
+			background: red;
+		}
+		#crt1,#crt1+a{
+			left: 0px;
+		}
+		#crt2,#crt2+a{
+			left: 20%;
+		}
+		#crt3,#crt3+a{
+			left: 40%;
+		}
+		#crt4,#crt4+a{
+			left: 60%;
+		}
+		#crt5,#crt5+a{
+			left: 80%;
+		}
+		.contenter input:checked a{
+			background: yellow;
+		}
+		.contenter input{
+			z-index: 99;
+			opacity: 0;
+		}
+		.contenter a{
+			z-index: 0;
+			text-align: center;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.contenter input:checked +a,.contenter input:checked:hover+ a{
+			background: yellow;
+		}
+		.contenter input:hover + a{
+			background: blue;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="contenter">
+		<input type="radio" name="check" id="crt1" checked="checked">
+		<a href="#">Home</a>
+		<input type="radio" name="check" id="crt2">
+		<a href="#">Service</a>
+		<input type="radio" name="check" id="crt3">
+		<a href="#">About</a>
+		<input type="radio" name="check" id="crt4">
+		<a href="#">Team</a>
+		<input type="radio" name="check" id="crt5">
+		<a href="#">Contact</a>
+	</div>
+</body>
+</html>
