@@ -3,11 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>平滑过渡页面练习1</title>
+	<link rel="stylesheet" type="text/css" href="../css1/fontawesome-all.css">
 	<style>
 		*{
 			padding: 0;
 			margin: 0;
 			box-sizing: border-box;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
 		}
 		.contenter input,.contenter a{
 			position: fixed;
@@ -54,22 +59,96 @@
 		.contenter input:hover + a{
 			background: blue;
 		}
+		.contenter{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.coe{
+			width: 100%;
+			height: 100%;
+			margin-top: 34px;
+			transition: transform 0.5s;
+		}
+		#crt1:checked ~ .coe #d1,
+		#crt2:checked ~ .coe #d2,
+		#crt3:checked ~ .coe #d3,
+		#crt4:checked ~ .coe #d4,
+		#crt5:checked ~ .coe #d5{
+			animation: pa 0.5s linear normal;
 
+		}
+		@keyframes pa{
+			from{
+				opacity: 1;
+			}
+			to{
+				opacity: 0;
+			}
+		}
+		.panel{
+			width: 100%;
+			height: 100%;
+		}
+		.contenter #crt1:checked ~ .coe{
+			transform: translateY(0px);
+		}
+		.contenter #crt2:checked ~ .coe{
+			transform: translateY(-100%);
+		}
+		.contenter #crt3:checked ~ .coe{
+			transform: translateY(-200%);
+		}
+		.contenter #crt4:checked ~ .coe{
+			transform: translateY(-300%);
+		}
+		.contenter #crt5:checked ~ .coe{
+			transform: translateY(-400%);
+		}
+		.coe{
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		.d1{
+			background-image: url();
+		}
+		.d2{
+			background-image: url();
+		}
+		.d3{
+			background-image: url();
+		}
+		.d4{
+			background-image: url();
+		}
+		.d5{
+			background-image: url();
+		}
+		.contenter a>i{
+			margin-right: 10px;
+		}
 
 	</style>
 </head>
 <body>
 	<div class="contenter">
 		<input type="radio" name="check" id="crt1" checked="checked">
-		<a href="#">Home</a>
+		<a href="#"><i class="fas fa-home"></i>Home</a>
 		<input type="radio" name="check" id="crt2">
-		<a href="#">Service</a>
+		<a href="#"><i class="fas fa-"></i>Service</a>
 		<input type="radio" name="check" id="crt3">
-		<a href="#">About</a>
+		<a href="#"><i class="fas fa-"></i>About</a>
 		<input type="radio" name="check" id="crt4">
-		<a href="#">Team</a>
+		<a href="#"><i class="fas fa-"></i>Team</a>
 		<input type="radio" name="check" id="crt5">
-		<a href="#">Contact</a>
+		<a href="#"><i class="fas fa-"></i>Contact</a>
+		<div class="coe">
+		<section class="panel" id="d1">Home</section>
+		<section class="panel" id="d2">Service</section>
+		<section class="panel" id="d3">About</section>
+		<section class="panel" id="d4">Team</section>
+		<section class="panel" id="d5">Contact</section>
+		</div>
 	</div>
 </body>
 </html>

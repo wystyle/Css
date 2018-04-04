@@ -3,11 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>平滑过渡页面练习2</title>
+	<link rel="stylesheet" type="text/css" href="../css1/fontawesome-all.css">
 	<style>
 		*{
 			padding: 0;
 			margin: 0;
 			box-sizing: border-box;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
 		}
 		.con input,.con a{
 			width: 20%;
@@ -56,21 +61,96 @@
 		.con input:checked:hover+ a{
 			background: yellow;
 		}
+		.con{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.coe{
+			width: 100%;
+			height: 100%;
+			margin-top: 34px;
+			transition: transform 0.5s;
+		}
+		@keyframes pc{
+			from{
+				opacity: 1;
+			}
+			to{
+				opacity: 0;
+			}
+		}
+		.panel{
+			width: 100%;
+			height: 100%;
+		}
+		#c1:checked ~ .coe{
+			transform: translateY(0px);
+		}
+		#c2:checked ~ .coe{
+			transform: translateY(-100%);
+		}
+		#c3:checked ~ .coe{
+			transform: translateY(-200%);
+		}
+		#c4:checked ~ .coe{
+			transform: translateY(-300%);
+		}
+		#c5:checked ~ .coe{
+			transform: translateY(-400%);
+		}
+		.panel{
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		#home{
+			background-image: url(../test2/13.jpg);
+		}
+		#Service{
+			background-image: url(../test2/14.jpg);
+		}
+		#About{
+			background-image: url(../test2/15.jpg);
+		}
+		#Team{
+			background-image: url(../test2/16.jpg);
+		}
+		#Contact{
+			background-image: url(../test2/17.jpg);
+		}
+		#c1:checked ~.coe #home,
+		#c2:checked ~.coe #Service,
+		#c3:checked ~.coe #About,
+		#c4:checked ~.coe #Team,
+		#c5:checked ~.coe #Contact{
+			animation: pc 0.5s linear normal;
+		}
+		.con a i{
+			margin-right: 10px;
+		}
+
 
 	</style>
 </head>
 <body>
 	<div class="con">
 		<input type="radio" name="ch" id="c1" checked="checked">
-		<a href="#">Home</a>
+		<a href="#"><i class="fas fa-home"></i>Home</a>
 		<input type="radio" name="ch" id="c2">
-		<a href="#">Service</a>
+		<a href="#"><i class="fas fa-"></i>Service</a>
 		<input type="radio" name="ch" id="c3">
-		<a href="#">About</a>
+		<a href="#"><i class="fas fa-"></i>About</a>
 		<input type="radio" name="ch" id="c4">
-		<a href="#">Team</a>
+		<a href="#"><i class="fas fa-"></i>Team</a>
 		<input type="radio" name="ch" id="c5">
-		<a href="#">Contact</a>
+		<a href="#"><i class="fas fa-"></i>Contact</a>
+		<div class="coe">
+			<section class="panel" id="home">home</section>
+			<section class="panel" id="Service">Service</section>
+			<section class="panel" id="About">About</section>
+			<section class="panel" id="Team">Team</section>
+			<section class="panel" id="Contact">Contact</section>
+		</div>
 	</div>
 </body>
 </html>
